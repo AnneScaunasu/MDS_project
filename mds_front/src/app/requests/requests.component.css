@@ -7,15 +7,14 @@ aside {
     width: 25%;
 }
 
-
-
 .search-form {
     background-color: #f4f4f4;
     padding: 20px;
     border-radius: 8px;
+    box-shadow: 10px 5px 5px rgb(155, 153, 153);
 }
 
-.search-form input{
+.search-form input {
     display: block;
     width: 95%;
     margin-bottom: 10px;
@@ -24,7 +23,6 @@ aside {
     border-radius: 5px;
 }
 
-
 .submit {
     background-color: #F07167;
     color: white;
@@ -32,8 +30,11 @@ aside {
     padding: 10px 20px;
     margin-bottom: 20px;
     cursor: pointer;
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border-radius: 5px;
+    
 }
 
 .search-form select,
@@ -44,7 +45,6 @@ aside {
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    
 }
 
 .search-form input[type="checkbox"] {
@@ -61,6 +61,7 @@ aside {
     width: 70%;
     line-height: 1.5;
     margin-left: 30px;
+    
 }
 
 .public-request-button {
@@ -70,9 +71,19 @@ aside {
     padding: 10px 20px;
     margin-bottom: 20px;
     cursor: pointer;
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border-radius: 5px;
     font-size: 15px;
+    box-shadow: 10px 5px 5px rgb(155, 153, 153);
+}
+
+.public-request-button:hover{
+    background-color: #0081A7;
+    transition: background-color 0.4s, color 0.4s;
+    box-shadow: 10px 5px 5px rgb(155, 153, 153);
+
 }
 
 .pet-sitter {
@@ -83,25 +94,15 @@ aside {
     border-radius: 8px;
     margin-bottom: 20px;
     align-items: center;
+    box-shadow: 10px 5px 5px rgb(155, 153, 153);
 }
 
 .profile-pic {
-    width: 150px;
+    width: 100px;
     height: 100px;
     background-color: #ccc;
     border-radius: 50%;
     margin-right: 40px;
-}
-
-
-
-.pet-sitter {
-    background-color: white;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    display: flex;
-    align-items: center;
 }
 
 .pet-sitter .profile-pic {
@@ -118,12 +119,19 @@ aside {
 
 .pet-sitter .info {
     flex: 1;
+    
+}
+
+.pet-sitter .info p{
+    padding-right: 20px;
 }
 
 .pet-sitter .info h3 {
     margin: 0;
     font-size: 1.2em;
-    color:#1c7c81;
+    color: #1c7c81;
+    display: flex;
+    align-items: center;
 }
 
 .pet-sitter .info .verified {
@@ -132,12 +140,27 @@ aside {
     padding: 2px 5px;
     border-radius: 3px;
     font-size: 0.8em;
+    margin-left: 10px;
 }
 
+.pet-sitter .info .rating {
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+}
 
 .pet-sitter .info .availability {
     font-size: 0.9em;
     color: gray;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.pet-sitter .availability p {
+    display: flex;
+    align-items: center;
+    margin: 0;
 }
 
 .pet-sitter .actions {
@@ -153,22 +176,63 @@ aside {
     cursor: pointer;
     border-radius: 5px;
     font-weight: 200;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .pet-sitter .actions button:nth-child(1) {
     background-color: #ff6b6b;
     border: #f4f4f4;
-    
+}
+
+.pet-sitter .actions button:nth-child(1):hover {
+    background-color: #0081A7;
+    transition: background-color 0.4s, color 0.4s;
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
 }
 
 .pet-sitter .actions button:nth-child(2) {
     background-color: #ffffff;
     color: #3D315B;
+}
+
+.pet-sitter .actions button:nth-child(2):hover {
+    background-color: #ff6b6b;
+    transition: background-color 0.4s, color 0.4s;
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
     
 }
 
-.pet-sitter .actions button:nth-child(3) {
-    background-color: #ffffff;
+.pet-sitter .actions button mat-icon {
+    margin-left: 5px;
+}
+
+.aside .image{
+    padding-top: 30px;
+    padding-left: 30px;
+}
+
+/*icons */
+.icon-job1 {
+    padding-right: 10px;
+    vertical-align: middle;
+    font-size: 20px;
     color: #3D315B;
-    
+}
+
+.icon-job2 {
+    padding-right: 10px;
+    vertical-align: middle;
+    font-size: 20px;
+    color: #ffffff;
+}
+.icon-job3 {
+    padding-right: 10px;
+    vertical-align: middle;
+    font-size: 20px;
+    color: #3D315B;
+}
+.star{
+    color: #f1b00b;
 }

@@ -1,18 +1,23 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { SearchFormComponent } from './main/main.component';
 import { RequestsComponent } from './requests/requests.component';
+import { ProfileComponent } from './profile/profile.component';
+import { JobsComponent } from './jobs/jobs.component';
 
 
 //path-ul dintre pagini
 const routes: Routes = [
   {
     path: 'jobs',
-    component: SearchFormComponent
+    component: JobsComponent
   },
   {
     path:'requests',
     component: RequestsComponent
+  },
+  {
+    path:'profile',
+    component: ProfileComponent
   }
   
 
