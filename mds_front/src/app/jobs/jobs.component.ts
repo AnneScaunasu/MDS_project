@@ -2,11 +2,11 @@ import { Component } from '@angular/core';
 
 
 @Component({
-  selector: 'app-main',
-  templateUrl: './main.component.html',
-  styleUrls: ['./main.component.css']
+  selector: 'app-jobs',
+  templateUrl: './jobs.component.html',
+  styleUrls: ['./jobs.component.css']
 })
-export class SearchFormComponent {
+export class JobsComponent{
   location: string = '';
   petSittingType: string = 'dog-walking';
   cats: boolean = false;

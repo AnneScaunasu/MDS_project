@@ -1,9 +1,8 @@
-
 <main>
-    <aside>
-
-        <!--  formular -->
+    <aside class="aside">
+        <!-- search form -->
         <form class="search-form">
+
             <input type="text" placeholder="Location">
             <!-- <button type="button">Use current location</button> -->
             <label for="pet-sitting-type">Pet Sitting Type</label>
@@ -18,18 +17,19 @@
                 <input type="checkbox" id="dogs">
                 <label for="dogs">Dogs</label>
             </div>
-            
-            <button class="submit">Search Petsitters</button>
+           
+            <button class="submit">Search Petsitters <mat-icon class="icon-job2">search</mat-icon></button>
         </form>
-        <img src="../assets/imagini/cat_girl.png" alt="Descrierea imaginii" width="250px">   
+        <div class="image">
+            <img src="../assets/imagini/cat_girl.png" alt="Descrierea imaginii" width="250px">
+        </div>
     </aside>
 
 
-    <!-- requests -->
+    
+    <!-- requests-->
     <section class="pet-sitters">
         <button class="public-request-button">Public Request + </button>
-        
-
 
         <div *ngFor="let request of requests" class="pet-sitter">
             <div class="profile-pic">
