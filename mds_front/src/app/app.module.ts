@@ -9,6 +9,9 @@ import { ProfileComponent } from './profile/profile.component';
 import { JobsComponent } from './jobs/jobs.component';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import{MatIconModule} from '@angular/material/icon'; /* pentru icons */
+import { provideHttpClient, withFetch } from '@angular/common/http';
+import { HomePageComponent } from './homepage/homepage.component';
+
 
 
 
@@ -19,7 +22,8 @@ import{MatIconModule} from '@angular/material/icon'; /* pentru icons */
     HeaderComponent,
     JobsComponent,
     RequestsComponent,
-    ProfileComponent
+    ProfileComponent,
+    HomePageComponent
   ],
   imports: [
     BrowserModule,
@@ -28,7 +32,8 @@ import{MatIconModule} from '@angular/material/icon'; /* pentru icons */
   ],
   providers: [
     provideClientHydration(),
-    provideAnimationsAsync()
+    provideAnimationsAsync(),
+    provideHttpClient(withFetch())
   ],
   bootstrap: [AppComponent]
 })
