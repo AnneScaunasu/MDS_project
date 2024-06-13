@@ -13,8 +13,16 @@ public class PetService {
 
     private String service_type;
     private String description;
+    private String location; //added by Delia
     private float rate_per_hour;
     private boolean availability;
+
+    //added id_user as a foreign key
+    //we need to identify who provides the service, or posts requests
+
+    @ManyToOne
+    @JoinColumn(name = "user_id")
+    private User user;
 
     @OneToMany(mappedBy = "petService", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private List<Booking> bookings = new ArrayList<>();
@@ -51,11 +59,27 @@ public class PetService {
         this.availability = availability;
     }
 
+    public User getUser(){
+        return this.user;
+    }
+
+    public void setUser(User user){
+        this.user = user;
+    }
+
     public List<Booking> getBookings() {
         return bookings;
     }
 
     public void setBookings(List<Booking> bookings) {
         this.bookings = bookings;
+    }
+
+    public String getLocation() {
+        return location;
+    }
+
+    public void setLocation(String location) {
+        this.location = location;
     }
 }

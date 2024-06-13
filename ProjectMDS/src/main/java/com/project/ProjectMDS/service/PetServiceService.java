@@ -13,6 +13,10 @@ public class PetServiceService {
     @Autowired
     private PetServiceRepository petServiceRepository;
 
+    public List<PetService> getByTypeAndLocation(String type, String location) {
+        return petServiceRepository.findAllByTypeAndLocation(type, location);
+    }
+
     public List<PetService> getAllServices() {
         return petServiceRepository.findAll();
     }

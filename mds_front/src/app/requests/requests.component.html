@@ -5,7 +5,7 @@
         <!--  formular -->
         <form class="search-form">
             <input type="text" placeholder="Location">
-            <button type="button">Use current location</button>
+            <!-- <button type="button">Use current location</button> -->
             <label for="pet-sitting-type">Pet Sitting Type</label>
             <select id="pet-sitting-type" >
                 <option value="dog-walking">Anything</option>
@@ -28,43 +28,27 @@
     <!-- requests -->
     <section class="pet-sitters">
         <button class="public-request-button">Public Request + </button>
-        <div class="pet-sitter">
+        
+
+
+        <div *ngFor="let request of requests" class="pet-sitter">
             <div class="profile-pic">
                 <!-- <img src="profile1.jpg" alt="Daria Popescu"> -->
             </div>
             <div class="info">
-                <h3>Ionela Maria<span class="verified">Verified</span></h3>
-                <p>I have a dog named Otto and am in need of a caring and reliable individual to look after him while I'm away....</p>
+                <h3>{{request.user?.username}} <span class="verified">Verified</span></h3>
+                <p>{{request.description}}</p>
 
                 <div class="availability">
-                    <p>Monday - Sunday 9:00 - 18:00</p>
-                    <p>Bloc 24, Strada Privighetorilor, Nr 45</p>
+                    <p>{{request.location}}</p>
                 </div>
             </div>
             <div class="actions">
                 <button>DETAILS</button>
                 <button>PHONE NO.</button>
-                <button>MESSAGE</button>
+                <!-- <button>MESSAGE</button> -->
             </div>
         </div>
 
-        <div class="pet-sitter">
-            <div class="profile-pic">
-                 <!-- <img src="profile1.jpg" alt="Daria Popescu"> -->
-            </div>
-            <div class="info">
-                <h3>Daniel Pirvu <span class="verified">Verified</span></h3>
-                <p>I have a dog named Otto and am in need of a caring and reliable individual to look after him while I'm away...</p>
-                <div class="availability">
-                    <p>Monday - Sunday 9:00 - 18:00</p>
-                    <p>Bloc 24, Strada Privighetorilor, Nr 45</p>
-                </div>
-            </div>
-            <div class="actions">
-                <button>DETAILS</button>
-                <button>PHONE NO.</button>
-                <button>MESSAGE</button>
-            </div>
-        </div>
     </section>
 </main>
