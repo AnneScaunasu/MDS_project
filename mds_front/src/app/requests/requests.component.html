@@ -26,42 +26,28 @@
     
     <!-- requests-->
     <section class="pet-sitters">
-        <button class="public-request-button">Public Job + </button>
-        <div class="pet-sitter">
+        <button class="public-request-button">Public Request + </button>
+        
+
+
+        <div *ngFor="let request of requests" class="pet-sitter">
             <div class="profile-pic">
                 <!-- <img src="profile1.jpg" alt="Daria Popescu"> -->
             </div>
             <div class="info">
-                <h3>Daria Popescu <span class="verified">Verified</span></h3>
-                <p>Pet Sitter or Pet Nanny. I offer Boarding dogs, Boarding cats, Dog walking, Visit cats, in Bucharest. I have 8 years of professional experience with pets, and I've been working with animals since ...</p>
-                
+                <h3>{{request.user?.username}} <span class="verified">Verified</span></h3>
+                <p>{{request.description}}</p>
+
                 <div class="availability">
-                    <p><mat-icon class="icon-job1">watch_later</mat-icon>Monday - Sunday 9:00 - 18:00</p>
-                    <p><mat-icon class="icon-job1">location_city</mat-icon>Bloc 24, Strada Privighetorilor, Nr 45</p>
+                    <p>{{request.location}}</p>
                 </div>
             </div>
             <div class="actions">
-                <button>DETAILS<mat-icon class="icon-job2">play_arrow</mat-icon></button>
-                <button>PHONE NO.<mat-icon class="icon-job3">call</mat-icon></button>
+                <button>DETAILS</button>
+                <button>PHONE NO.</button>
+                <!-- <button>MESSAGE</button> -->
             </div>
         </div>
-        <div class="pet-sitter">
-            <div class="profile-pic">
-                 <!-- <img src="profile1.jpg" alt="Daria Popescu"> -->
-            </div>
-            <div class="info">
-                <h3>Daniel Pirvu <span class="verified">Verified</span></h3>
-                <p>Pet Sitter or Pet Nanny. I offer Boarding dogs, Boarding cats, Dog walking, Visit cats, in Bucharest. I have 8 years of professional experience with pets, and I've been working with animals since ...</p>
-                
-                <div class="availability">
-                    <p><mat-icon class="icon-job1">watch_later</mat-icon>Monday - Sunday 9:00 - 18:00</p>
-                    <p><mat-icon class="icon-job1">location_city</mat-icon>Bloc 24, Strada Privighetorilor, Nr 45</p>
-                </div>
-            </div>
-            <div class="actions">
-                <button>DETAILS<mat-icon class="icon-job2">play_arrow</mat-icon></button>
-                <button>PHONE NO.<mat-icon class="icon-job3">call</mat-icon></button>
-            </div>
-        </div>
+
     </section>
 </main>
