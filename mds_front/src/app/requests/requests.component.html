@@ -2,8 +2,11 @@
     <aside class="aside">
         <!-- search form -->
         <form class="search-form">
-            <label for="pet-sitting-type">Pet Sitting Type </label>
-            <select id="pet-sitting-type">
+
+            <input type="text" placeholder="Location">
+            <!-- <button type="button">Use current location</button> -->
+            <label for="pet-sitting-type">Pet Sitting Type</label>
+            <select id="pet-sitting-type" >
                 <option value="dog-walking">Anything</option>
                 <option value="dog-walking">Dog Walking</option>
                 <option value="boarding-dogs">Pet Sitting</option>
@@ -27,8 +30,6 @@
     <!-- requests-->
     <section class="pet-sitters">
         <button class="public-request-button">Public Request + </button>
-        
-
 
         <div *ngFor="let request of requests" class="pet-sitter">
             <div class="profile-pic">
