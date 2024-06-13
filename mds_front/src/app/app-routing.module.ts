@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { RequestsComponent } from './requests/requests.component';
 import { ProfileComponent } from './profile/profile.component';
 import { JobsComponent } from './jobs/jobs.component';
+import { HomePageComponent } from './homepage/homepage.component';
 
 
 //path-ul dintre pagini
@@ -18,6 +19,10 @@ const routes: Routes = [
   {
     path:'profile',
     component: ProfileComponent
+  },
+  {
+    path:'home',
+    component: HomePageComponent
   }
   
 
