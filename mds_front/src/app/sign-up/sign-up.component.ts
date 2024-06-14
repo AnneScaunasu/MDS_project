@@ -28,7 +28,7 @@ export class SignUpComponent {
     if (this.validForm()) {
       environment.username = this.name;
       environment.password = this.password;
-      this.router.navigate(['/home']);
+      this.router.navigate(['/']);
     } else {
       this.showFormError = true;
     }

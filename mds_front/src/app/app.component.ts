@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { environment } from '../environments/environment';
 
 @Component({
   selector: 'app-root',
@@ -13,13 +14,11 @@ import { Router } from '@angular/router';
 export class AppComponent {
   constructor(private router: Router) {}
   title = 'ProiectPetSitters';
-  username = '';
-  password = '';
 
   onSignOut(event: boolean) {
     if(event) {
-      this.username = '';
-      this.password = '';
+      environment.username = '';
+      environment.password = '';
     }
   }
 

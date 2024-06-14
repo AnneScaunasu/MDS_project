@@ -23,7 +23,7 @@ const routes: Routes = [
     component: ProfileComponent
   },
   {
-    path:'home',
+    path:'',
     component: HomePageComponent
   },
   {
