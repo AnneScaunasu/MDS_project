@@ -2,6 +2,8 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { NgForm, FormsModule } from '@angular/forms';
+import { Router } from '@angular/router';
+import { environment } from '../../environments/environment';
 
 @Component({
   selector: 'app-sign-up',
@@ -12,6 +14,8 @@ import { NgForm, FormsModule } from '@angular/forms';
 })
 export class SignUpComponent {
 
+  constructor(private router: Router) {}
+
   job: boolean = false;
   request: boolean = false;
   name: string = '';
@@ -20,11 +24,11 @@ export class SignUpComponent {
   confirmPassword: string = '';
   showFormError: boolean = false;
 
-  constructor() {}
-
   onSubmit(form: NgForm) {
     if (this.validForm()) {
-      // redirect to main
+      environment.username = this.name;
+      environment.password = this.password;
+      this.router.navigate(['/home']);
     } else {
       this.showFormError = true;
     }
