@@ -52,7 +52,13 @@ public class PetServiceController {
         }
     }
 
-    @GetMapping
+    @GetMapping("/getServiceByTypeAndLocation")
+    public ResponseEntity<PetService> getServiceByTypeAndLocation(@RequestParam String type, @RequestParam String location) {
+        List<PetService> services = petServiceService.getByTypeAndLocation(type, location);
+        return new ResponseEntity<>(services, HttpStatus.OK);
+    }
+
+    @GetMapping("/getAllServices")
     public ResponseEntity<List<PetService>> getAllServices() {
         List<PetService> services = petServiceService.getAllServices();
         return new ResponseEntity<>(services, HttpStatus.OK);

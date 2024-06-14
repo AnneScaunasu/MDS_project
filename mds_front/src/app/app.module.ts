@@ -4,8 +4,13 @@ import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
-import { SearchFormComponent } from './main/main.component';
 import { RequestsComponent } from './requests/requests.component';
+import { ProfileComponent } from './profile/profile.component';
+import { JobsComponent } from './jobs/jobs.component';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import { MatIconModule} from '@angular/material/icon'; /* pentru icons */
+import { provideHttpClient, withFetch } from '@angular/common/http';
+import { HomePageComponent } from './homepage/homepage.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { LoginComponent } from './login/login.component';
 
@@ -14,7 +19,11 @@ import { LoginComponent } from './login/login.component';
     AppComponent,
     SearchFormComponent,
     RequestsComponent,
-    LoginComponent
+    LoginComponent,
+    JobsComponent,
+    RequestsComponent,
+    ProfileComponent,
+    HomePageComponent
   ],
   imports: [
     BrowserModule,
@@ -22,9 +31,13 @@ import { LoginComponent } from './login/login.component';
     SignUpComponent,
     AppRoutingModule,
     FormsModule
+    AppRoutingModule,
+    MatIconModule
   ],
   providers: [
-    provideClientHydration()
+    provideClientHydration(),
+    provideAnimationsAsync(),
+    provideHttpClient(withFetch())
   ],
   bootstrap: [AppComponent]
 })

@@ -1,25 +1,35 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { SearchFormComponent } from './main/main.component';
 import { RequestsComponent } from './requests/requests.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
+import { ProfileComponent } from './profile/profile.component';
+import { JobsComponent } from './jobs/jobs.component';
+import { HomePageComponent } from './homepage/homepage.component';
 
 
 //path-ul dintre pagini
 const routes: Routes = [
   {
     path: 'jobs',
-    component: SearchFormComponent
+    component: JobsComponent
   },
   {
     path:'requests',
     component: RequestsComponent
   },
   {
+    path:'profile',
+    component: ProfileComponent
+  },
+  {
+    path:'home',
+    component: HomePageComponent
+  },
+  {
     path:'sign-in',
     component: SignUpComponent
   }
-  
+
 
 ];
 
