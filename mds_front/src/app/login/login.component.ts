@@ -22,7 +22,7 @@ export class LoginComponent {
     if (this.validForm()) {
       environment.username = 'admin';
       environment.password = 'admin;'
-      this.router.navigate(['/home']);
+      this.router.navigate(['/']);
     } else {
       alert("Credentialele nu sunt valide");
     }

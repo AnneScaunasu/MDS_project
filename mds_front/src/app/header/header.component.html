@@ -2,10 +2,11 @@
     <img src="../assets/imagini/logo3.png" alt="Descrierea imaginii" width="250px">
 
     <nav>
-        <a href="/requests">Find Sitter</a>
-        <a href="/home">How It Works</a>
+        <a href="/requests">Find a job</a>
+        <a href="/jobs">Find Sitter</a>
+        <a href="/">How It Works</a>
         <button (click)="redirectToProfile()" class="profile-button">Profile</button>
         <button *ngIf="userSignedIn()" class="signout-button" (click)="signOut()">Sign Out</button>
-        <button *ngIf="!userSignedIn()" class="signout-button" (click)="signIn()">Log In</button>
+        <button *ngIf="!userSignedIn()" class="signout-button" (click)="signIn()">Sign In</button>
     </nav>
 </header>

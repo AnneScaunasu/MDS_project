@@ -1,6 +1,7 @@
-import { Component, Input, Injectable, Output, EventEmitter } from "@angular/core";
+import { Component, Injectable, Output, EventEmitter } from "@angular/core";
 import { CommonModule } from "@angular/common";
 import { Router } from "@angular/router";
+import { environment } from "../../environments/environment";
 
 @Injectable({
     providedIn: 'root'
@@ -18,13 +19,10 @@ export class HeaderComponent {
 
     constructor(private router: Router) {}
 
-    @Input() username!: string;
-    @Input() password!: string;
-
     @Output() emitterSignOut = new EventEmitter<boolean>;
 
     userSignedIn() {
-        return this.username !== undefined && this.username !== '';
+        return environment.username !== undefined && environment.username !== '';
     }
 
     signIn() {
