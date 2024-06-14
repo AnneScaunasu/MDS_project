@@ -1,1 +1,24 @@
-<p>login works!</p>
+
+<form #form="ngForm" (ngSubmit)="onSubmit(form)">
+
+    <div class="title">
+      <h2 class="font-broadway title-text">Paws&Playdates</h2>
+      <span class="login-text">Welcome back! Please log in into your account</span>
+    </div>
+
+    <div class="login-form">
+      <div>
+        <label for="email">Email</label>
+        <br>
+        <input type="email" id="email" name="email" [(ngModel)]="email" required>
+      </div>
+      <div>
+        <label for="password">Password</label>
+        <br>
+        <input type="password" id="password" name="password" [(ngModel)]="password" required>
+      </div>
+    </div>
+  
+    <button class="submit-button" type="submit" [disabled]="!validForm()">Next Step</button>
+  </form>
+  

@@ -5,6 +5,7 @@ import { SignUpComponent } from './sign-up/sign-up.component';
 import { ProfileComponent } from './profile/profile.component';
 import { JobsComponent } from './jobs/jobs.component';
 import { HomePageComponent } from './homepage/homepage.component';
+import { LoginComponent } from './login/login.component';
 
 
 //path-ul dintre pagini
@@ -28,9 +29,11 @@ const routes: Routes = [
   {
     path:'sign-in',
     component: SignUpComponent
+  },
+  {
+    path:'login',
+    component: LoginComponent
   }
-
-
 ];
 
 @NgModule({

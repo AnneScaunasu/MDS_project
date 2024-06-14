@@ -17,9 +17,7 @@ import { LoginComponent } from './login/login.component';
 @NgModule({
   declarations: [
     AppComponent,
-    SearchFormComponent,
     RequestsComponent,
-    LoginComponent,
     JobsComponent,
     RequestsComponent,
     ProfileComponent,
@@ -30,7 +28,8 @@ import { LoginComponent } from './login/login.component';
     HeaderComponent,
     SignUpComponent,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    LoginComponent,
     AppRoutingModule,
     MatIconModule
   ],
