@@ -1,0 +1,8 @@
+@font-face {
+  font-family: 'Broadway';
+  src: url('/assets/fonts/8094231822.ttf') format('truetype');
+}
+
+.font-broadway {
+  font-family: 'Broadway', sans-serif;
+}

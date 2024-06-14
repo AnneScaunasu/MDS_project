@@ -1,13 +1,11 @@
-<body>
-    <header>
-        
-        <img src="../assets/imagini/LOGO2.png" alt="Descrierea imaginii" width="250px">
-        
-        <nav>
-            <a href="#">Find Sitter</a>
-            <a href="#">How It Works</a>
-            <button class="profile-button">Profile</button>
-            <button class="signout-button">Sign Out</button>
-        </nav>
-    </header>
-    </body>
+<header>
+    <img src="../assets/imagini/LOGO2.png" alt="Descrierea imaginii" width="250px">
+
+    <nav>
+        <a href="#">Find Sitter</a>
+        <a href="#">How It Works</a>
+        <button class="profile-button">Profile</button>
+        <button *ngIf="userSignedIn()" class="signout-button" (click)="signIn()">Sign Out</button>
+        <button *ngIf="!userSignedIn()" class="signout-button" (click)="signOut()">Sign In</button>
+    </nav>
+</header>

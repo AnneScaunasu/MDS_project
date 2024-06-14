@@ -1,0 +1,43 @@
+<form #form="ngForm" (ngSubmit)="onSubmit(form)">
+
+  <div class="title">
+    <h2 class="font-broadway title-text">Create account</h2>
+    <span class="login-text">Already have an account</span>
+    <a href="#" class="login-button">Log in</a>
+  </div>
+
+  <div class="types-of-accounts">
+    <label>
+      <input type="checkbox" name="job" [(ngModel)]="job"> I want a job
+    </label>
+    <br>
+    <label>
+      <input type="checkbox" name="request" [(ngModel)]="request"> I want to request
+    </label>
+  </div>
+  <div class="sign-in-form">
+    <div>
+      <label for="name">Full name</label>
+      <br>
+      <input type="text" id="name" name="name" [(ngModel)]="name" required>
+    </div>
+    <div>
+      <label for="email">Email</label>
+      <br>
+      <input type="email" id="email" name="email" [(ngModel)]="email" required>
+      <!-- <div class="worning-text" *ngIf="validateEmail()">Email-ul introdus nu este valid!</div> -->
+    </div>
+    <div>
+      <label for="password">Password</label>
+      <br>
+      <input type="password" id="password" name="password" [(ngModel)]="password" required>
+    </div>
+    <div>
+      <label for="confirmPassword">Confirm password</label>
+      <br>
+      <input type="password" id="confirmPassword" name="confirmPassword" [(ngModel)]="confirmPassword" required>
+    </div>
+  </div>
+
+  <button class="submit-button" type="submit" [disabled]="!validForm()">Next Step</button>
+</form>
