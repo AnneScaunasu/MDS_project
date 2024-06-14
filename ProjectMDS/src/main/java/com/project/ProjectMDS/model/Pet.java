@@ -15,6 +15,8 @@ public class Pet {
     private String special_needs;
     private String vaccination_status;
     private String notes;
+
+    //relatie intre pet si user de many to one
     @ManyToOne
     @JoinColumn(name = "user_id")
     private User user;

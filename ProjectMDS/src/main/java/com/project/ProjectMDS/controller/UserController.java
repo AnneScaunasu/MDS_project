@@ -9,12 +9,15 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
+
+// requesturile catre user se vor duce la "api/users"
 @RequestMapping("/api/users")
 public class UserController {
 
     @Autowired
     private UserService userService;
 
+    // crud pe user - afisarea cu GET, create cu POST, actualizare cu PUT, delete cu DELETE
     @GetMapping
     public ResponseEntity<List<User>> getAllUsers() {
         return ResponseEntity.ok(userService.getAllUsers());

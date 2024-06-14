@@ -15,6 +15,7 @@ public class Payment {
     private String payment_method;
     private String payment_status;
 
+    // relate intre payment si booking de many to one
     @ManyToOne
     @JoinColumn(name = "booking_id")
     private Booking booking;

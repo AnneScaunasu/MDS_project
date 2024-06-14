@@ -13,6 +13,8 @@ public class PetService {
     @Autowired
     private PetRepository petRepository;
 
+    // operatii crud pe clasa pet
+
     public List<Pet> getAllPets() {
         return petRepository.findAll();
     }

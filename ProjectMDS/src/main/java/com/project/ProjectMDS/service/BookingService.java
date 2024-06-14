@@ -13,6 +13,8 @@ public class BookingService {
     @Autowired
     private BookingRepository bookingRepository;
 
+    // operatii crud pe clasa booking
+
     public List<Booking> getAllBookings() {
         return bookingRepository.findAll();
     }

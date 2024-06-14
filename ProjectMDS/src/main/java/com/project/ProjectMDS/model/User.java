@@ -17,6 +17,12 @@ public class User {
     private String address;
     private Date registration_date;
 
+
+    // am adaugat in clasa user si relatia de cu per service - one to many
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    private List<PetService> services = new ArrayList<>();
+
+    // relatii de one to many cu bookings si pets
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private List<Booking> bookings = new ArrayList<>();
 

@@ -10,22 +10,26 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
+// requesturile catre aceasta entitate se vor duce la "api/pets"
 @RequestMapping("/api/pets")
 public class PetController {
 
     private final PetService petService;
 
+    // initializam petService cu dependency injection
     @Autowired
     public PetController(PetService petService) {
         this.petService = petService;
     }
 
+    // post request pentru creare
     @PostMapping
     public ResponseEntity<Pet> createPet(@RequestBody Pet pet) {
         Pet createdPet = petService.createPet(pet);
         return new ResponseEntity<>(createdPet, HttpStatus.CREATED);
     }
 
+    //put request pentru update
     @PutMapping("/{id}")
     public ResponseEntity<Pet> updatePet(@PathVariable Long id, @RequestBody Pet pet) {
         Pet updatedPet = petService.updatePet(id, pet);
@@ -36,12 +40,14 @@ public class PetController {
         }
     }
 
+    // request de delete pentru delete
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> deletePet(@PathVariable Long id) {
         petService.deletePet(id);
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
 
+    // get request pentru afisare
     @GetMapping("/{id}")
     public ResponseEntity<Pet> getPetById(@PathVariable Long id) {
         Pet pet = petService.getPetById(id);

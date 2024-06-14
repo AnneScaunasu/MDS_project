@@ -10,22 +10,26 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
+// requesturile catre payments se vor duce la "api/payments"
 @RequestMapping("/api/payments")
 public class PaymentController {
 
     private final PaymentService paymentService;
 
+    // initializam paymentService cu dependency injection
     @Autowired
     public PaymentController(PaymentService paymentService) {
         this.paymentService = paymentService;
     }
 
+   // createPayment cu HTTP POST
     @PostMapping
     public ResponseEntity<Payment> createPayment(@RequestBody Payment payment) {
         Payment createdPayment = paymentService.createPayment(payment);
         return new ResponseEntity<>(createdPayment, HttpStatus.CREATED);
     }
 
+    //updatePayment cu HTTPS PUT
     @PutMapping("/{id}")
     public ResponseEntity<Payment> updatePayment(@PathVariable Long id, @RequestBody Payment payment) {
         Payment updatedPayment = paymentService.updatePayment(id, payment);
@@ -36,12 +40,14 @@ public class PaymentController {
         }
     }
 
+    // deletePayment cu HTTP DELETE
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> deletePayment(@PathVariable Long id) {
         paymentService.deletePayment(id);
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
 
+    // getPayment cu HTTP GET
     @GetMapping("/{id}")
     public ResponseEntity<Payment> getPaymentById(@PathVariable Long id) {
         Payment payment = paymentService.getPaymentById(id);

@@ -13,6 +13,7 @@ public class PaymentService {
     @Autowired
     private PaymentRepository paymentRepository;
 
+    //operatiile crud pe clasa list
     public List<Payment> getAllPayments() {
         return paymentRepository.findAll();
     }

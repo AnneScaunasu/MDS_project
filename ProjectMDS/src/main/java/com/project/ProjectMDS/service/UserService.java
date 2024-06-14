@@ -13,6 +13,7 @@ public class UserService {
     @Autowired
     private UserRepository userRepository;
 
+    // operatii crud pe clasa user
     public List<User> getAllUsers() {
         return userRepository.findAll();
     }

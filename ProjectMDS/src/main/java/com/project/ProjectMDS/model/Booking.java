@@ -17,6 +17,8 @@ public class Booking {
     private float total_cost;
     private String status;
 
+    // relatiile dintre booking si celelalte clase:
+    // one to many cu payments, many to  one cu user si pet service, one to one cu review
     @OneToMany(mappedBy = "booking", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private List<Payment> payments = new ArrayList<>();
 
