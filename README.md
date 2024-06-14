@@ -6,8 +6,8 @@ From backend project directory run this command in terminal:
 From frontend project run:
 `ng serve`
 
-# [Documentație](https://github.com/AnneScaunasu/MDS_project/blob/main/Documentatie.docx)
-# [Demo](https://github.com/AnneScaunasu/MDS_project/blob/main/AppDemo.mp4)
+## [Documentație](https://github.com/AnneScaunasu/MDS_project/blob/main/Documentatie.docx)
+## [Demo](https://github.com/AnneScaunasu/MDS_project/blob/main/AppDemo.mp4)
 
 
 
