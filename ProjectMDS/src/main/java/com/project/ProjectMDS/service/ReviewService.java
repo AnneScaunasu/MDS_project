@@ -13,6 +13,7 @@ public class ReviewService {
     @Autowired
     private ReviewRepository reviewRepository;
 
+    // operatii crud pe review
     public List<Review> getAllReviews() {
         return reviewRepository.findAll();
     }

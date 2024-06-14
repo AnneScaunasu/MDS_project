@@ -24,6 +24,8 @@ public class PetService {
     @JoinColumn(name = "user_id")
     private User user;
 
+
+    // relatie one to many intre petService si booking
     @OneToMany(mappedBy = "petService", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private List<Booking> bookings = new ArrayList<>();
 

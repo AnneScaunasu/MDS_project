@@ -14,6 +14,7 @@ public class Review {
     private int rating;
     private Date review_date;
 
+    // relate one to one cu booking
     @OneToOne
     @JoinColumn(name = "booking_id")
     private Booking booking;

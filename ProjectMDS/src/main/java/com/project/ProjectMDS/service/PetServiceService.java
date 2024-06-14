@@ -13,6 +13,8 @@ public class PetServiceService {
     @Autowired
     private PetServiceRepository petServiceRepository;
 
+    // operatii crud pe clasa pet service
+
     public List<PetService> getByTypeAndLocation(String type, String location) {
         return petServiceRepository.findAllByTypeAndLocation(type, location);
     }

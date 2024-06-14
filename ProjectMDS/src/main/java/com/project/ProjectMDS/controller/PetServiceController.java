@@ -10,11 +10,13 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
+// requesturile catre aceasta entitate se vor duce la "api/services"
 @RequestMapping("/api/services")
 public class PetServiceController {
 
     private final PetServiceService petServiceService;
 
+    // initializam petServiceService cu dependency injection
     @Autowired
     public PetServiceController(PetServiceService petServiceService) {
         this.petServiceService = petServiceService;
@@ -53,7 +55,7 @@ public class PetServiceController {
     }
 
     @GetMapping("/getServiceByTypeAndLocation")
-    public ResponseEntity<PetService> getServiceByTypeAndLocation(@RequestParam String type, @RequestParam String location) {
+    public ResponseEntity<List<PetService>> getServiceByTypeAndLocation(@RequestParam String type, @RequestParam String location) {
         List<PetService> services = petServiceService.getByTypeAndLocation(type, location);
         return new ResponseEntity<>(services, HttpStatus.OK);
     }
