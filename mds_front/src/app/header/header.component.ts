@@ -33,6 +33,11 @@ export class HeaderComponent {
 
     signOut() {
         this.emitterSignOut.emit(true);
+        this.router.navigate(['/sign-in']);
+    }
+
+    redirectToProfile() {
+        this.router.navigate(['/profile']);
     }
 
 }
