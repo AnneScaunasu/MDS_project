@@ -1,2 +1,7 @@
-<app-header></app-header>
+<app-header
+    [username]="username"
+    [password]="password"
+    (emitterSignOut)="onSignOut($event)">
+</app-header>
 <app-main></app-main>
+<router-outlet></router-outlet>
